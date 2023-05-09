@@ -209,14 +209,3 @@ legend("bottomright", legend = c("Model1", "Model2"),
        col = c("green", "red"), lty = 1, cex = 0.8)
 ```
 
-```{r}
-# Predict using model1 and calculate accuracy
-predicted_lables_model1 <- predict(model1, type = "response") > 0.5
-accuracy_model1 <- sum(predicted_lables_model1 == NBA$TARGET_5Yrs) / nrow(NBA)
-
-predicted_lables_model_step <- predict(model_step, type = "response") > 0.5
-accuracy_model_step <- sum(predicted_lables_model_step == NBA$TARGET_5Yrs) / nrow(NBA)
-
-cat("Accuracy for model 1: ", accuracy_model1, "\n")
-cat("Accuracy for model step: ", accuracy_model_step, "\n")
-```
